@@ -24,7 +24,9 @@ puts 'Setting up Database (recreating tables) ...'
 
 ActiveRecord::Schema.define do
   drop_table :stores if ActiveRecord::Base.connection.table_exists?(:stores)
-  drop_table :employees if ActiveRecord::Base.connection.table_exists?(:employees)
+  if ActiveRecord::Base.connection.table_exists?(:employees)
+    drop_table :employees
+  end
   create_table :stores do |t|
     t.column :name, :string
     t.column :annual_revenue, :integer

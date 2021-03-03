@@ -5,7 +5,7 @@ require_relative './exercise_3'
 require_relative './exercise_4'
 require_relative './exercise_5'
 
-puts "Exercise 6"
-puts "----------"
+puts 'Exercise 6'
+puts '----------'
 
 # Your code goes here ...
